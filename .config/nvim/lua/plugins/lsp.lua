@@ -3,11 +3,19 @@ return {
     opts = {
         ensure_installed = {
             "lua_ls",
---            "csharp_ls"
+            "csharp_ls"
         },
     },
     dependencies = {
-        { "mason-org/mason.nvim",                    opts = {} },
+        { "WhoIsSethDaniel/mason-tool-installer.nvim",
+        opts = {
+            ensure_installed = {
+                "stylua"
+            }
+        },
+    },
+        { "mason-org/mason.nvim",                    opts = {
+        } },
         "neovim/nvim-lspconfig",
 --        { "Decodetalkers/csharpls-extended-lsp.nvim" },
          { "seblyng/roslyn.nvim",  opts = { }, }
