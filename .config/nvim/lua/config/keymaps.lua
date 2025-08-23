@@ -1,8 +1,10 @@
 local conform = require("conform")
 local builtin = require("telescope.builtin")
 
-vim.keymap.set("n", "<leader>et", "<cmd>Neotree position=float toggle<cr>")
-vim.keymap.set("n", "<leader>eb", "<cmd>Neotree buffers position=float toggle<cr>")
+vim.keymap.set({ "n", "i" }, "<c-s>", "<cmd>wa<cr>")
+
+vim.keymap.set("n", "<leader>et", "<cmd>Neotree toggle<cr>")
+vim.keymap.set("n", "<leader>eb", "<cmd>Neotree buffers toggle<cr>")
 
 vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })

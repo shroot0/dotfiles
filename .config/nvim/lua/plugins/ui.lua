@@ -2,8 +2,11 @@ return {
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		opts = {
+			window = {
+				position = "float",
+			},
 			filesystem = {
-				hijack_netrw_behavior = "disabled",
+				hijack_netrw_behavior = "open_default",
 			},
 		},
 		branch = "v3.x",
