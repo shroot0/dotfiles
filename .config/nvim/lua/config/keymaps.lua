@@ -1,7 +1,10 @@
 local conform = require("conform")
 local builtin = require("telescope.builtin")
 
-vim.keymap.set({ "n", "i" }, "<c-s>", "<cmd>wa<cr>")
+vim.keymap.set("n", "<c-s>", "<cmd>wa<cr>")
+vim.keymap.set("i", "<c-s>", "<cmd>wa<cr><esc>")
+vim.keymap.set("v", "<c-c>", '"+y')
+vim.keymap.set({ "n", "i" }, "<c-v>", '"+p')
 
 vim.keymap.set("n", "<leader>et", "<cmd>Neotree toggle<cr>")
 vim.keymap.set("n", "<leader>eb", "<cmd>Neotree buffers toggle<cr>")
