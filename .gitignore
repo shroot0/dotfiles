@@ -1,0 +1,11 @@
+*
+!*/
+.local/
+
+!.gitignore
+!.README.md
+
+!.bashrc
+
+!.config/nvim/**
+.config/nvim/lazy-lock.json
