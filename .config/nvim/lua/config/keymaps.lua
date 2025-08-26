@@ -14,3 +14,8 @@ vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live gr
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 
 vim.keymap.set("n", "<leader>rf", conform.format)
+
+vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<cr>")
+vim.keymap.set("n", "<leader>dd", "<cmd>DapNew<cr>")
+vim.keymap.set("n", "<leader>dc", "<cmd>DapContinue<cr>")
+vim.keymap.set("n", "<leader>dr", "<cmd>lua require'dap'.repl.open()<cr>")

@@ -13,6 +13,7 @@ return {
 				ensure_installed = {
 					"stylua",
 					"csharpier",
+					"netcoredbg",
 				},
 			},
 		},
