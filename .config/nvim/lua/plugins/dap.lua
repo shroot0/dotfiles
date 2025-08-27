@@ -1,24 +1,26 @@
 return {
-	"mfussenegger/nvim-dap",
-	dependencies = {},
-	config = function()
-		local dap = require("dap")
+	{
+		"mfussenegger/nvim-dap",
+		dependencies = {},
+		config = function()
+			local dap = require("dap")
 
-		dap.adapters.coreclr = {
-			type = "executable",
-			command = os.getenv("HOME") .. "/.local/share/nvim/mason/bin/netcoredbg",
-			args = { "--interpreter=vscode" },
-		}
+			dap.adapters.coreclr = {
+				type = "executable",
+				command = os.getenv("HOME") .. "/.local/share/nvim/mason/bin/netcoredbg",
+				args = { "--interpreter=vscode" },
+			}
 
-		dap.configurations.cs = {
-			{
-				type = "coreclr",
-				name = "launch - netcoredbg",
-				request = "launch",
-				program = function()
-					return vim.fn.input("Path to dll", vim.fn.getcwd() .. "/bin/Debug/", "file")
-				end,
-			},
-		}
-	end,
+			dap.configurations.cs = {
+				{
+					type = "coreclr",
+					name = "launch - netcoredbg",
+					request = "launch",
+					program = function()
+						return vim.fn.input("Path to dll", vim.fn.getcwd() .. "/bin/Debug/", "file")
+					end,
+				},
+			}
+		end,
+	},
 }

@@ -1,23 +1,11 @@
 return {
-	"mason-org/mason-lspconfig.nvim",
-	opts = {
-		ensure_installed = {
-			"lua_ls",
-			"csharp_ls",
-		},
+	{
+		"nvim-lspconfig",
 	},
-	dependencies = {
-		{
-			"WhoIsSethDaniel/mason-tool-installer.nvim",
-			opts = {
-				ensure_installed = {
-					"stylua",
-					"csharpier",
-					"netcoredbg",
-				},
-			},
-		},
-		{ "mason-org/mason.nvim", opts = {} },
-		{ "neovim/nvim-lspconfig" },
+	{
+		"Decodetalkers/csharpls-extended-lsp.nvim",
+		config = function()
+			require("csharpls_extended").buf_read_cmd_bind()
+		end,
 	},
 }
