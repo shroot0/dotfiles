@@ -3,7 +3,7 @@
 .local/
 
 !.gitignore
-!.README.md
+!README.md
 
 !.bashrc
 
