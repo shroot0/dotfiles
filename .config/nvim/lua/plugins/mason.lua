@@ -4,6 +4,7 @@ return {
 		opts = {
 			registries = {
 				"github:mason-org/mason-registry",
+				"github:Crashdummyy/mason-registry",
 			},
 		},
 	},
@@ -12,7 +13,7 @@ return {
 		opts = {
 			ensure_installed = {
 				"lua_ls",
-				"csharp_ls",
+				"ocamllsp",
 			},
 		},
 		dependencies = {
@@ -25,8 +26,10 @@ return {
 		opts = {
 			ensure_installed = {
 				"stylua",
+				"roslyn",
 				"csharpier",
 				"netcoredbg",
+				"ocamlformat",
 			},
 		},
 		dependencies = {
