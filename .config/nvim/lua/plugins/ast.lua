@@ -4,11 +4,16 @@ return {
 		branch = "master",
 		lazy = false,
 		build = ":TSUpdate",
-		opts = {
-			ensure_installed = {
-				"lua",
-				"c_sharp",
-			},
-		},
+		config = function()
+			require("nvim-treesitter.configs").setup({
+				ensure_installed = {
+					"lua",
+					"c_sharp",
+				},
+				highlight = {
+					enable = true,
+				},
+			})
+		end,
 	},
 }
